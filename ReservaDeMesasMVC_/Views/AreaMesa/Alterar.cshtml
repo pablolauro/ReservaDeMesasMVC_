@@ -1,0 +1,36 @@
+﻿@model ReservaDeMesasMVC_.Models.AreaMesa
+
+@{
+    ViewData["Title"] = "Alterar";
+}
+
+
+<h4>Area da Mesa</h4>
+<hr />
+<div class="row">
+    <div class="container px-3 my-3">
+        <form asp-action="Alterar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating mb-3" >                
+                <input asp-for="id" class="form-control" hidden="true"/>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="nome" class="form-control" />
+                <label asp-for="nome" class="control-label"></label>                
+                <span asp-validation-for="nome" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="AreaMesas">Voltar para a Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

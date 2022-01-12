@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ReservaDeMesasMVC_.Models.AreaMesa>
+
+@{
+    ViewData["Title"] = "Area das Mesas";
+}
+
+<h1>Area das Mesas</h1>
+
+<p>
+    <a asp-action="Cadastrar" class="btn btn-success btn-lg">Nova Area</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                <a href="@Url.Action("Alterar","AreaMesa", new {id = item.id})" class="btn btn-info">
+                    <i class="fa fa-pencil" data-toggle="tooltip" title="Editar"></i>
+                    Alterar
+                </a>
+
+                <a onclick="Delete(@item.id)" class="btn btn-danger"><i class="fa fa-trash" data-toggle="tooltip" title="Excluir"></i>Excluir</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@section scripts{
+    <script>        
+        $(function() {
+            var successMessage = "@TempData["SuccessMessage"]"
+            if(successMessage!='')
+                alertify.success(successMessage);
+        });
+
+        function Delete(id){            
+            alertify.confirm('Area das Mesas','Deseja excluir o registro?', function(){
+                window.location.href = '@Url.Action("Excluir","AreaMesa")/'+id;
+            }, null
+            );
+        }
+    </script>
+}

@@ -1,0 +1,96 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ReservaDeMesasMVC_
+build_property.RootNamespace = ReservaDeMesasMVC_
+build_property.ProjectDir = D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/AreaMesa/Alterar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJlYU1lc2FcQWx0ZXJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/AreaMesa/AreaMesas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJlYU1lc2FcQXJlYU1lc2FzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/AreaMesa/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJlYU1lc2FcQ2FkYXN0cmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/AreaMesa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJlYU1lc2FcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Cliente/CadastrarOuAlterar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDYWRhc3RyYXJPdUFsdGVyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Cliente/Clientes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDbGllbnRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Mesa/CadastrarOuAlterar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzYVxDYWRhc3RyYXJPdUFsdGVyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Mesa/Mesas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzYVxNZXNhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Reserva/CadastrarOuAlterar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YVxDYWRhc3RyYXJPdUFsdGVyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Reserva/Reservas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXJ2YVxSZXNlcnZhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Usuario/CadastrarOuAlterar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDYWRhc3RyYXJPdUFsdGVyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Usuario/LoginPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Usuario/Usuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xVc3Vhcmlvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projet/ReservaDeMesasMVC_/ReservaDeMesasMVC_/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-2lmyjhvt9a

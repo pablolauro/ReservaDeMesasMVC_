@@ -1,0 +1,80 @@
+﻿@model IEnumerable<ReservaDeMesasMVC_.Models.Mesa>
+
+@{
+    ViewData["Title"] = "Mesas";
+}
+
+<h1>Mesas</h1>
+
+<p>
+    <a asp-action="CadastrarOuAlterar" class="btn btn-success btn-lg">Nova Mesa</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.qtdlugares)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numMesa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.funcionando)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idAreaMesa)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.qtdlugares)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.numMesa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.funcionando)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.area.nome)
+            </td>
+            <td>
+                <a href="@Url.Action("CadastrarOuAlterar","Mesa", new {id = item.id})" class="btn btn-info">
+                    <i class="fa fa-pencil" data-toggle="tooltip" title="Editar"></i>
+                    Alterar
+                </a>
+
+                <a onclick="Delete(@item.id)" class="btn btn-danger"><i class="fa fa-trash" data-toggle="tooltip" title="Delete"></i> Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@section scripts{
+    <script>
+        $(function(){
+            var successMessage = "@TempData["SuccessMessage"]";
+            if (successMessage!= '')
+                alertify.success(successMessage)
+        });
+
+        function Delete(id){            
+            alertify.confirm('Mesa', 'Deseja excluir o registro?', 
+            function(){ 
+                window.location.href = '@Url.Action("Excluir","Mesa")/'+id; 
+            }
+                , function(){ alertify.error('Cancelado')});
+        }
+    </script>
+}
