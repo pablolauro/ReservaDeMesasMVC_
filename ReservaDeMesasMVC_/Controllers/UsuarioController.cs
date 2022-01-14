@@ -8,7 +8,7 @@ using System.Security.Claims;
 
 namespace ReservaDeMesasMVC_.Controllers
 {
-    [Authorize]
+    
     public class UsuarioController : Controller
     {
         string BaseUrl = "https://localhost:7233/";
@@ -119,6 +119,7 @@ namespace ReservaDeMesasMVC_.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [Authorize]
         public async Task<ActionResult> Usuarios()
         {
 
@@ -144,12 +145,14 @@ namespace ReservaDeMesasMVC_.Controllers
 
         }
 
+
+        [Authorize]
         public IActionResult CadastrarOuAlterar()
         {
             return View();
         }
 
-
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> CadastrarOuAlterar(Usuario p, int id)
         {
@@ -162,6 +165,7 @@ namespace ReservaDeMesasMVC_.Controllers
             return RedirectToAction("usuarios");
         }
 
+        [Authorize]
         public async Task<IActionResult> ExcluirAsync(int id)
         {
             HttpClient client = new HttpClient();
