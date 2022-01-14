@@ -11,7 +11,7 @@ namespace ReservaDeMesasMVC_.Models
         [Display(Name = "Quantidade de Lugares:")]
         public int qtdlugares { get; set; }
         [Required(ErrorMessage ="Campo obrigatório")]
-        [Range(1, 999)]
+        [Range(1, 999, ErrorMessage = "O número da mesa deve ser maior que 0")]
         [Display(Name = "Nº da Mesa:")]
         public int numMesa { get; set; }
         [Required(ErrorMessage = "Campo obrigatório")]
@@ -21,5 +21,6 @@ namespace ReservaDeMesasMVC_.Models
         public int idAreaMesa { get; set; }
         public AreaMesa? area { get; set; }
         public List<Reserva>? reservas { get; set; }
+        public string? exibirMesa { get; set; }
     }
 }

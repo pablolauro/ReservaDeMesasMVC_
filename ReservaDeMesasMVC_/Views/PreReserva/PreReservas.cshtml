@@ -1,0 +1,96 @@
+﻿@model IEnumerable<ReservaDeMesasMVC_.Models.PreReserva>
+
+@{
+    ViewData["Title"] = "Pré Reservas";
+}
+
+<h2>Pré Reservas</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nomecliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.emailcliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fonecliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.observacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nomecliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.emailcliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fonecliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.observacao)
+            </td>
+            <td>
+
+                <a href="@Url.Action("CadastrarOuAlterar","Cliente", new {id = 0,
+                    nomecliente = item.nomecliente,
+                    emailcliente = item.emailcliente,
+                    fonecliente = item.fonecliente
+                })" class="btn btn-info">
+                    <i class="fa fa-user-o" data-toggle="tooltip" title="Cliente"></i>
+                    Cadastrar Cliente
+                </a>
+
+
+                <a href="@Url.Action("CadastrarOuAlterar","Reserva", new {id = 0,
+                    datapreserva = item.data
+                })" class="btn btn-info">
+                    <i class="fa fa-address-book" data-toggle="tooltip" title="Reserva"></i>
+                    Cadastrar Reserva
+                </a>
+
+                <a onclick="Delete(@item.id)" class="btn btn-danger"><i class="fa fa-trash" data-toggle="tooltip" title="Delete"></i> Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@section scripts{
+    <script>
+        $(function(){
+            var successMessage = "@TempData["SuccessMessage"]";
+            if (successMessage!= '')
+                alertify.success(successMessage)
+        });
+
+        function Delete(id){            
+            alertify.confirm('Mesa', 'Deseja excluir o registro?', 
+            function(){ 
+                window.location.href = '@Url.Action("Excluir","PreReserva")/'+id; 
+            }
+                , function(){ alertify.error('Cancelado')});
+        }
+    </script>
+}

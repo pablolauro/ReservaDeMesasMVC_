@@ -4,11 +4,12 @@
     ViewData["Title"] = "Reservas";
 }
 
-<h1>Reservas</h1>
+<h2>Reservas</h2>
 
 <p>
     <a asp-action="CadastrarOuAlterar" class="btn btn-success btn-lg">Nova Reserva</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -29,6 +30,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.mesa.numMesa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mesa.area)
             </th>
             <th></th>
         </tr>
@@ -53,6 +57,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.mesa.numMesa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mesa.area.nome)
             </td>
             <td>
                 <a href="@Url.Action("CadastrarOuAlterar","Reserva", new {id = item.id})" class="btn btn-info">

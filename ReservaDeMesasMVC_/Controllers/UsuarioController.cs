@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using ReservaDeMesasMVC_.Models;
@@ -7,6 +8,7 @@ using System.Security.Claims;
 
 namespace ReservaDeMesasMVC_.Controllers
 {
+    [Authorize]
     public class UsuarioController : Controller
     {
         string BaseUrl = "https://localhost:7233/";

@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using ReservaDeMesasMVC_.Models;
+using System.Globalization;
 
 namespace ReservaDeMesasMVC_.Controllers
 {
+    [Authorize]
     public class ReservaController : Controller
     {
 
@@ -26,7 +29,7 @@ namespace ReservaDeMesasMVC_.Controllers
             client.DefaultRequestHeaders.Accept.Add(
                 new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 
-            HttpResponseMessage response = await client.GetAsync("api/reservas");
+            HttpResponseMessage response = await client.GetAsync("api/reservas/data");
 
             if (response.IsSuccessStatusCode)
             {
@@ -39,7 +42,7 @@ namespace ReservaDeMesasMVC_.Controllers
 
         }
 
-        public IActionResult CadastrarOuAlterar(int id = 0)
+        public IActionResult CadastrarOuAlterar(int id = 0, string datapreserva = "")
         {
             List<Cliente>? clientes = new List<Cliente>();
             List<Mesa>? mesas = new List<Mesa>();
@@ -53,7 +56,7 @@ namespace ReservaDeMesasMVC_.Controllers
 
             HttpResponseMessage responseClientes = client.GetAsync("api/clientes/").Result;
 
-            HttpResponseMessage responseMesas = client.GetAsync("api/mesas/").Result;
+            HttpResponseMessage responseMesas = client.GetAsync("api/mesas/funcionando").Result;
 
             if (responseClientes.IsSuccessStatusCode)
             {
@@ -63,15 +66,28 @@ namespace ReservaDeMesasMVC_.Controllers
 
                 dados = responseMesas.Content.ReadAsStringAsync().Result;
 
-                mesas = JsonConvert.DeserializeObject<List<Mesa>>(dados);
+                mesas = JsonConvert.DeserializeObject<List<Mesa>>(dados);                
 
                 ViewBag.clienteId = new SelectList(clientes, "id", "nome");
 
-                ViewBag.mesaId = new SelectList(mesas, "id", "numMesa");                
+                ViewBag.mesaId = new SelectList(mesas, "id", "exibirMesa"); //"numMesa"
             }
 
             if (id == 0)
-                return View(new Reserva());
+            {
+                Reserva r = new Reserva();
+
+
+                if (!string.IsNullOrEmpty(datapreserva))
+                {
+                    r.data = DateTime.ParseExact(datapreserva, "MM/dd/yyyy HH:mm:ss",
+                                        null);
+                }
+
+                return View(r);
+
+            }
+
             else
             {
                 HttpResponseMessage response = client.GetAsync("api/reservas/" + id.ToString()).Result;

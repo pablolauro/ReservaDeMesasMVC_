@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="@Url.Content("~/Restaurant-master/css/main.css")" media="screen" type="text/css">
 
 </head>
 <body>
@@ -40,6 +41,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Mesa" asp-action="Mesas">Mesa</a>
+                            </li>                            
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="PreReserva" asp-action="PreReservas">Pré Reserva</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Reserva" asp-action="Reservas">Reserva</a>
@@ -49,19 +53,18 @@
                             </li>                        
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Usuarios">Usuário</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Logout">Logout</a>
-                            </li>   
-                        } 
-                        @if (!User.Identity.IsAuthenticated)
-                        {
-                          <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="LoginPage">Login</a>
-                          </li>
-                        }
-                                                
+                            </li> 
+                        }                                                
                     </ul>
+                    @if (!User.Identity.IsAuthenticated)
+                    {                        
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="LoginPage">Login</a>
+                    } else
+                    {
+                       <a class="nav-link text-dark" >@User.Identity.Name</a>
+                       <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Logout">Logout</a>
+                    }
+
                 </div>
             </div>
         </nav>
@@ -85,5 +88,6 @@
     <script src="~/js/site.js" asp-append-version="true"></script>  
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("Styles", required: false)
 </body>
 </html>

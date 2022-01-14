@@ -7,37 +7,38 @@
 
 <h4>Mesa</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="row" style="width: 30%">
+    <div class="container px-3 my-3">
         <form asp-action="CadastrarOuAlterar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">               
                 <input asp-for="id" class="form-control" hidden ="true"/>                
             </div>
-            <div class="form-group">
-                <label asp-for="qtdlugares" class="control-label"></label>
-                <input asp-for="qtdlugares" class="form-control" />
+            <div class="form-floating mb-3">
+                <input asp-for="qtdlugares" class="form-control" placeholder="Quantidade de lugares" id="qtdlugares"/>
+                <label asp-for="qtdlugares" class="control-label" for="qtdlugares"></label>
                 <span asp-validation-for="qtdlugares" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="numMesa" class="control-label"></label>
-                <input asp-for="numMesa" class="form-control" />
+            <div class="form-floating mb-3">
+                <input asp-for="numMesa" class="form-control" placeholder="Nº da mesa" id="numMesa"/>
+                <label asp-for="numMesa" class="control-label" for="numMesa"></label>
                 <span asp-validation-for="numMesa" class="text-danger"></span>
             </div>
-            <div class="form-group form-check">
+            <div class="form-group mb-3 form-check form-switch">
                 <label class="form-check-label">
-                     @Html.DisplayNameFor(model => model.funcionando)<input class="form-check-input" asp-for="funcionando" checked="true"/>
+                     <input class="form-check-input" asp-for="funcionando" type="checkbox" id="funcionando")/>
+                     <label class="form-check-label" for="funcionando">Mesa Funcionando</label>
                 </label>
             </div>
-            <div class="form-group">
-                <label asp-for="idAreaMesa" class="control-label"></label>
+            <div class="form-floating mb-3">
                 <!--<input asp-for="idAreaMesa" class="form-control" />-->
-                <select asp-for="idAreaMesa" class="form-control" asp-items="ViewBag.idAreaMesa"></select>
+                <select asp-for="idAreaMesa" class="form-control" asp-items="ViewBag.idAreaMesa" placeholder="Area da Mesa" id="idAreaMesa"></select>
+                <label asp-for="idAreaMesa" class="control-label" for="idAreaMesa"></label>
 
                 <span asp-validation-for="idAreaMesa" class="text-danger"></span>
             </div>
             <br/>
-            <div class="form-group">
+            <div class="form-floating mb-3">
                 <input type="submit" value="Salvar" class="btn btn-primary" />
             </div>
         </form>
@@ -45,7 +46,9 @@
 </div>
 
 <div>
-    <a asp-action="Mesas">Voltar para a Lista</a>
+    <a asp-action="Mesas" class="btn btn-light">
+        Voltar para a Lista</a>
+
 </div>
 
 @section Scripts {

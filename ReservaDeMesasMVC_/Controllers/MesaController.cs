@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using ReservaDeMesasMVC_.Models;
 
 namespace ReservaDeMesasMVC_.Controllers
 {
+    [Authorize]
     public class MesaController : Controller
     {
         string BaseUrl = "https://localhost:7233/";

@@ -1,8 +1,183 @@
-﻿@{
+﻿@model ReservaDeMesasMVC_.Models.PreReserva
+
+@{
     ViewData["Title"] = "Bar e Choperia do Pinduca";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+@section Styles {
+
+        <link rel="stylesheet" href="@Url.Content("~/Restaurant-master/css/normalize.css")">
+        <link rel="stylesheet" href="@Url.Content("~/Restaurant-master/css/main.css")" media="screen" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="@Url.Content("~/Restaurant-master/css/style-portfolio.css")">
+        <link rel="stylesheet" href="@Url.Content("~/Restaurant-master/css/picto-foundry-food.css")" />
+        <link rel="stylesheet" href="@Url.Content("~/Restaurant-master/css/jquery-ui.css")">        
+        <link href="@Url.Content("~/Restaurant-master/css/font-awesome.min.css")" rel="stylesheet">
+        <link rel="icon" href="@Url.Content("~/Restaurant-master/favicon-1.ico")" type="image/x-icon">
+        <link rel="stylesheet" href="@Url.Content("~/Restaurant-master/css/bootstrap.css")">
+}
+
+
+        <!-- ============ About Us ============= -->
+
+        <section id="story" class="description_content">
+            <div class="text-content container">
+                <div class="col-md-6">
+                    <h1>Quem somos</h1>
+                    <div class="fa fa-cutlery fa-2x"></div>
+                    <p class="desc-text">Uma ótima comida, uma ótima bebida e um atendimento  espetacular.
+                                         Esse é o nosso restaurante venha ter uma ótima experiência gastronômica. 
+                                         Somos um pequeno grupo, que torna a comida simples em algo espetacular. 
+                                         Venha se juntar a nós !
+                        </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="img-section">
+                       <img src="~/Restaurant-master/images/kabob.jpg" width="250" height="220">
+                       <img src="~/Restaurant-master/images/limes.jpg" width="250" height="220">
+                       <div class="img-section-space"></div>
+                       <img src="~/Restaurant-master/images/radish.jpg"  width="250" height="220">
+                       <img src="~/Restaurant-master/images/corn.jpg"  width="250" height="220">
+                   </div>
+                </div>
+            </div>
+        </section>
+
+
+       
+
+
+        <!-- ============ Our Beer  ============= -->
+
+
+        <section id ="beer" class="description_content">
+            <div  class="beer background_content">
+                <h1 style="background-color:rgba(255, 99, 71, 0.5);">Ótimo Lugar para se  <span>Divertir</span></h1>
+            </div>
+            <div class="text-content container"> 
+                <div class="col-md-5">
+                   <div class="img-section">
+                       <img src="~/Restaurant-master/images/beer_spec.jpg" width="100%">
+                   </div>
+                </div>
+                <br>
+                <div class="col-md-6 col-md-offset-1">
+                    <h1>Nossa Cerveja</h1>
+                    <div class="icon-beer fa-2x"></div>
+                    <p class="desc-text">Aqui no Restaurante somos todos apaixonados pela cerveja. 
+                        Sabores novos e ousados ​​entram em nossas portas todas as semanas, 
+                        e não podemos deixar de exibi-los. Enquanto apreciamos os clássicos, 
+                        estamos sempre apaixonados por descobrir algo novo, então pare e experimente nosso ofício no seu melhor.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ Reservation  ============= -->
+
+        <section  id="reservation"  class="description_content">
+            <div class="featured background_content">
+                <h1 style="background-color:rgba(255, 99, 71, 0.5);">Faça sua reserva</h1>
+            </div>
+            <div class="text-content container"> 
+                <div class="inner contact">
+                    <!-- Form Area -->
+                    <div class="contact-form">
+                        <!-- Form -->
+                        <form asp-action="CadastrarOuAlterar" >
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <!-- Left Inputs -->
+                            <div class="container px-3 my-3">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-6 col-xs-12">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-xs-6 ">
+                                                <div class="form-group">                                                    
+                                                    <input asp-for="id" class="form-control" hidden="true"/>
+                                                </div>
+                                                <!-- Name -->
+                                                <div class="form-floating mb-3">
+                                                    <input asp-for="nomecliente" class="form-control" required="required" placeholder="Nome"/>
+                                                    <label asp-for="nomecliente" class="control-label"></label>
+                                                    <span asp-validation-for="nomecliente" class="text-danger" ></span>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input asp-for="fonecliente" class="form-control" required="required" class="form-control" placeholder="Telefone"/>
+                                                    <label asp-for="fonecliente" class="control-label"></label>
+                                                    <span asp-validation-for="fonecliente" class="text-danger"></span>                                                    
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input asp-for="emailcliente" class="form-control" required="required" class="form-control" placeholder="E-mail"/>
+                                                    <label asp-for="emailcliente" class="control-label"></label>
+                                                    <span asp-validation-for="emailcliente" class="text-danger"></span>                                                    
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <input asp-for="data" class="form-control"  required="required" class="form-control" placeholder="Data da Reserva"/>
+                                                    <label asp-for="data" class="control-label"></label>
+                                                    <span asp-validation-for="data" class="text-danger"></span>
+                                                </div>
+                                                <div class="form-floating mb-3">
+                                                    <textarea asp-for="observacao" type="textarea" class="form-control" required="required" class="form-control" placeholder="Observações" rows="5" cols="33">
+                                                    </textarea>
+                                                    <label asp-for="observacao" class="control-label"></label>
+                                                    <span asp-validation-for="observacao" class="text-danger"></span>                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 ">
+                                               
+                                                <!-- Send Button -->
+                                                <button type="submit" id="submit" name="submit" class="text-center form-btn form-btn">Faça sua pré Reserva</button> 
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-4 col-md-6 col-xs-12">
+                                        <!-- Message -->
+                                        <div class="right-text">
+                                            <h2>Horários</h2><hr>
+                                            <p>Terça a Sexta: 18:00 - 23:00 </p>
+                                            <p>Sábado e Domingo: 16:00 - 23:00</p>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Clear -->
+                            <div class="clear"></div>
+                        </form>
+                    </div><!-- End Contact Form Area -->
+                </div><!-- End Inner -->
+            </div>
+        </section>     
+
+
+
+
+
+
+        <!-- ============ Footer Section  ============= -->
+
+        <footer class="sub_footer">
+            <div class="container">
+                <div class="col-md-8"><p class="sub-footer-text text-center">&copy; Restaurante Atos UFN 2022, >Aluno Pablo Lauro da Silva</p></div>
+            </div>
+        </footer>
+
+@section scripts{
+    <script type="text/javascript" src="@Url.Content("~/Restaurant-master/js/jquery-1.10.2.min.js")"> </script>
+    <script type="text/javascript" src="@Url.Content("~/Restaurant-master/js/bootstrap.min.js")" ></script>
+    <script type="text/javascript" src="@Url.Content("~/Restaurant-master/js/jquery-1.10.2.js")"></script>     
+    <script type="text/javascript" src="@Url.Content("~/Restaurant-master/js/jquery.mixitup.min.js")" ></script>
+    <script type="text/javascript" src="@Url.Content("~/Restaurant-master/js/main.js")" ></script>
+
+
+    <script>        
+        $(function() {
+            var successMessage = '@TempData["SuccessMessage"]'
+            if(successMessage!='')
+                alertify.success(successMessage);
+        });
+
+    </script>
+}

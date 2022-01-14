@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using ReservaDeMesasMVC_.Models;
 
 namespace ReservaDeMesasMVC_.Controllers
 {
+    [Authorize]
     public class ClienteController : Controller
     {
         string BaseUrl = "https://localhost:7233/";
@@ -37,10 +39,23 @@ namespace ReservaDeMesasMVC_.Controllers
 
         }
 
-        public IActionResult CadastrarOuAlterar(int id = 0)
+        public IActionResult CadastrarOuAlterar(int id = 0,string nomecliente = "", 
+            string emailcliente = "", string fonecliente = "")
         {
             if (id == 0)
-                return View(new Cliente());
+            {
+                Cliente c = new Cliente();
+
+                
+                if (!string.IsNullOrEmpty(nomecliente))
+                {                    
+                    c.nome = nomecliente;
+                    c.email = emailcliente;
+                    c.telefone = fonecliente;
+                } 
+
+                return View(c);
+            }                
             else
             {
                 HttpClient client = new HttpClient();

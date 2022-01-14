@@ -1,3 +1,11 @@
+D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.GeneratedMSBuildEditorConfig.editorconfig
+D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.AssemblyInfoInputs.cache
+D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.AssemblyInfo.cs
+D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.csproj.CoreCompileInputs.cache
+D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.MvcApplicationPartsAssemblyInfo.cache
+D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.RazorAssemblyInfo.cache
+D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.RazorAssemblyInfo.cs
+D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.csproj.AssemblyReference.cache
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\bin\Debug\net6.0\appsettings.Development.json
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\bin\Debug\net6.0\appsettings.json
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\bin\Debug\net6.0\ReservaDeMesasMVC_.staticwebassets.runtime.json
@@ -214,13 +222,6 @@ D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\bin\Debug\net6.0\zh-Hant\Microso
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.GeneratedMSBuildEditorConfig.editorconfig
-D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.AssemblyInfoInputs.cache
-D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.AssemblyInfo.cs
-D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.csproj.CoreCompileInputs.cache
-D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.MvcApplicationPartsAssemblyInfo.cache
-D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.RazorAssemblyInfo.cache
-D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.RazorAssemblyInfo.cs
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\staticwebassets.build.json
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\staticwebassets.development.json
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
@@ -231,4 +232,3 @@ D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasM
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ref\ReservaDeMesasMVC_.dll
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.pdb
 D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.genruntimeconfig.cache
-D:\projet\ReservaDeMesasMVC_\ReservaDeMesasMVC_\obj\Debug\net6.0\ReservaDeMesasMVC_.csproj.AssemblyReference.cache

@@ -14,7 +14,9 @@ namespace ReservaDeMesasMVC_.Models
         [Display(Name = "Senha:")]
         [StringLength(100, MinimumLength = 5, ErrorMessage ="A senha deve possuir no mínimo 5 caracteres")]
         public string password { get; set; }
-        [StringLength(3, MinimumLength = 3, ErrorMessage = "A senha deve possuir no mínimo 5 caracteres")]
+        [Required(ErrorMessage = "Campo obrigatório")]
+        [StringLength(3, MinimumLength = 3, ErrorMessage = "O tipo deve possuir 3 caracteres")]
+        [Display(Name = "Tipo:")]
         public string tipo { get; set; }
         public Cliente? cliente { get; set; }
     }
